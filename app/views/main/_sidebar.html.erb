@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--아코디언 효과 의 사이드바 나중에 제대로 쓸라면 파일을 추가해야함-->
+
+<div name="sidebar" class="w3-sidebar w3-bar-block">
+
+  <%=link_to '사이드바',nil,:class => 'w3-bar-item w3-button'%></li>
+  <%=link_to '공지사항',notices_path,:class => 'w3-bar-item w3-button'%></li>
+  <%=link_to '강의',lectures_path,:class =>'w3-bar-item w3-button'%></li>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button">게시판 <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block">
+
+      <%=link_to '강의노트',lecture_notes_path,:class =>'w3-bar-item w3-button' %></li>
+      <%=link_to '자유게시판',posts_path,:class =>'w3-bar-item w3-button' %></li>  </div>
+  </div>
+</div>
+
+
+<%=link_to '갤러리',galleries_path, :class =>'w3-bar-item w3-button' %></li>
+
+</div>
