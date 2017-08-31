@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 
 #test 회원가입
 gem 'devise'
-
-
+#페이지네이션 ->기본설정으로해뒀으나 config 를 추가해놓았음
+gem 'kaminari'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use sqlite3 as the database for Active Record
