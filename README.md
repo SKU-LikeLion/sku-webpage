@@ -34,3 +34,14 @@ galleries, lectures,main ,notices, posts, lectures_notes 파일이있는데  각
   
   
 
+
+
+09.12 front-end
+- bootstrap Gem 설치(3.3.6),
+  application.scss(boostrap templete, css파일 import),
+  application.js(boostrap require)
+- 레이아웃
+  application.html.erb 안에 _sidebar 페이지 렌더.
+  페이지들 상하에 header, footer 페이지 렌더.
+- 공지사항, 게시판 완료
+- 갤러리 수정중(구성어떻게할지좀더생각..업로드가능하나용..??)
