@@ -1,31 +1,45 @@
-<p id="notice"><%= notice %></p>
+<div class="main-panel">
+  <!--header-->
+  <%= render template: "main/_header" %>
+  <!--content-->
+  <div class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="card gallery-card">
+                      <div class="header notice-header">
+                          <h4 class="title f-size-l">갤러리</h4>
+                          <p class="category">활동사진을 올리는 곳입니다.</p>
+                          <%= link_to '업로드', new_gallery_path, class: 'btn btn-info btn-fill btn-wd btn-write' %>
+                      </div>
+                      <div class="row content gallery-content">
+                          <!--<% 3.times do %>-->
+                            <div class="col-md-4 gallery-div">
+                              <img src="assets/img01.jpg" alt="gallery-img" >
+                              <div class="gallery-span">
+                                <span>멋사사진입니당~</span>
+                                <span>2017-09-06</span>
+                              </div>
+                            </div>
+                            <div class="col-md-4 gallery-div">
+                              <img src="assets/img02.jpg" alt="gallery-img" >
+                            </div>
+                            <div class="col-md-4 gallery-div">
+                              <img src="assets/img03.jpg" alt="gallery-img" >
+                            </div>
+                          <!--<% end %>-->
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- pagination -->
+          <div class="row text-center">
+            <%= paginate @galleries %>
+          </div>
+      </div>
+  </div>
 
-<h1>Galleries</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @galleries.each do |gallery| %>
-      <tr>
-        <td><%= gallery.title %></td>
-        <td><%= gallery.content %></td>
-        <td><%= gallery.image %></td>
-        <td><%= link_to 'Show', gallery %></td>
-        <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
-        <td><%= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Gallery', new_gallery_path %>
+  <!-- footer -->
+  <%= render template: "main/_footer" %>
+</div>

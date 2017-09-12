@@ -1,5 +1,20 @@
-<h1>New Post</h1>
+<div class="main-panel">
+  <!--header-->
+  <%= render template: "main/_header" %>
+  <!--content-->
+  <div class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                <%= render 'form', post: @post %>
+              </div>
+          </div>
+      </div>
+  </div>
 
-<%= render 'form', post: @post %>
 
-<%= link_to 'Back', posts_path %>
+  <!-- footer -->
+  <%= render template: "main/_footer" %>
+
+<!--<%= link_to 'Back', posts_path %>-->
+</div>

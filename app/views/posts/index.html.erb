@@ -1,30 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="main-panel">
+  <!--header-->
+  <%= render template: "main/_header" %>
+  <!--content-->
+  <div class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="card">
+                      <div class="header notice-header">
+                          <h4 class="title f-size-l">게시판</h4>
+                          <p class="category">게시판을 올리는 곳입니다.</p>
+                          <%= link_to '글쓰기', new_post_path, class: 'btn btn-info btn-fill btn-wd btn-write' %>
+                      </div>
+                      <div class="content table-responsive table-full-width">
+                          <table class="table table-striped m-y-3">
+                              <thead>
+                                  <tr class="table-head">
+                                  	<th class="text-center">제목</th>
+                                  	<th class="text-center">글쓴이</th>
+                                  	<th class="text-center">날짜</th>
+                                  	<th class="text-center">조회수</th>
+                              	</tr>
+                              </thead>
+                              <tbody>
+                                <% @posts.each do |post| %>
+                                  <tr>
+                                  	<td><%= link_to "#{post.title}", post, class: 'board-title-style' %></td>
+                                  	<td class="text-center">글쓴이다</td>
+                                  	<td class="text-center"><%= post.created_at.strftime("%Y-%m-%d") %></td>
+                                  	<td class="text-center">조회수다</td>
+                                  </tr>
+                                <% end %>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- pagination -->
+          <div class="row text-center">
+            <%= paginate @posts %>
+          </div>
+      </div>
+  </div>
 
-<h1>Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-    <%= paginate @posts %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+  <!-- footer -->
+  <%= render template: "main/_footer" %>
+</div>

@@ -1,3 +1,102 @@
-// Place all the styles related to the Notices controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.f-size-s {
+    font-size: 1.1em !important;
+}
+.f-size-l{
+    font-size: 1.7em !important;
+}
+.f-w-bold{
+    font-weight: 600;
+}
+.m-y-1 {
+    margin-top:10px !important;
+    margin-bottom:10px !important;
+}
+.m-y-3 {
+    margin-top:13px !important;
+    margin-bottom:13px !important;
+}
+.m-x-1 {
+    margin-left:10px !important;
+    margin-right:10px !important;
+}
+
+.notice-header {
+    position: relative;
+}
+.btn-write {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.btn-wd {
+    min-width: 100px !important;
+}
+.show-card {
+    padding: 15px 100px;
+}
+.show-info-wrap span{
+    display: inline-block;
+    margin-left: 15px;
+}
+.show-content {
+    font-family: 'Muli', 'NanumSquare', "Helvetica", Arial, sans-serif;
+    border: none;
+    background-color: white;
+    font-size: 1.2em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.notice-title {
+    font-size: 1.8em;
+}
+.show-btn a{
+    margin-left: 15px;
+}
+.comments span {
+    margin-right: 10px;
+}
+.comment-style {
+    background-color: #fff;
+    border: none;
+    width:100%;
+    resize: none;
+}
+.comment-style:focus {
+    outline: none;
+}
+.table-head th:nth-child(1){
+    width: 70%;
+}
+.table-head th:nth-child(2),.table-thead th:nth-child(3),.table-thead th:nth-child(4){
+    width: 10%;
+}
+.board-title-style {
+    color: inherit !important;
+}
+.board-title-style:hover {
+    color: #68b3c8 !important;
+}
+// pagination css
+.pagination > li > a, .pagination > li > span {
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+}
+.pagination > li:last-child > a, .pagination > li:last-child > span, .pagination > li:first-child > a, .pagination > li:first-child > span {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    border: none;
+    border-bottom: 3px solid #68b3c8;
+    background: none;
+    color: #68b3c8;
+    font-weight:600;
+}
+.pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:focus {
+    color: #68b3c8;
+    background: none;
+    boder: none;
+}

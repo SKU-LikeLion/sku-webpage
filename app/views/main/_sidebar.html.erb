@@ -1,1 +1,61 @@
-<!--sidebar여기다 넣고  render하는 걸 추천합니다..-->
+<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    성결대 멋쟁이사자처럼
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li class="active">
+                    <a href="user.html">
+                        <i class="ti-user"></i>
+                        <p>내 정보</p>
+                    </a>
+                </li>                
+                <li>
+                    <a href="<%=notices_path%>">
+                        <i class="ti-bell"></i>
+                        <p>공지사항</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="ti-headphone-alt"></i>
+                        <p>강의자료</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
+                        <i class="ti-pencil-alt"></i>
+                        <p>강의노트</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<%= posts_path %>">
+                        <i class="ti-comments"></i>
+                        <p>게시판</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<%= galleries_path %>">
+                        <i class="ti-gallery"></i>
+                        <p>갤러리</p>
+                    </a>
+                </li>
+
+				<li class="active-pro">
+                    <a href="upgrade.html">
+                        <i class="ti-export"></i>
+                        <p>Upgrade to PRO</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
+    </div>

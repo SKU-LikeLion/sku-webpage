@@ -1,6 +1,29 @@
-<h1>Editing Notice</h1>
+<head>
+    <link rel="stylesheet" href="../../assets/templetes/paper-dashboard.css">
+</head>
 
-<%= render 'form', notice: @notice %>
 
-<%= link_to 'Show', @notice %> |
-<%= link_to 'Back', notices_path %>
+<!--<%= link_to 'Show', @notice %> |-->
+<!--<%= link_to 'Back', notices_path %>-->
+
+
+<div class="main-panel">
+  <!--header-->
+  <%= render template: "main/_header" %>
+  <!--content-->
+  <div class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                                      
+                <%= render 'form', notice: @notice %>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- footer -->
+  <%= render template: "main/_footer" %>
+
+<!--<%= link_to 'Back', notices_path %>-->
+</div>
