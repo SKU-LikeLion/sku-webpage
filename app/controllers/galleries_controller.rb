@@ -1,24 +1,27 @@
 class GalleriesController < ApplicationController
   before_action :set_gallery, only: [:show, :edit, :update, :destroy]
-
   # GET /galleries
   # GET /galleries.json
   def index
+   # @keyword = "갤러리"
     @galleries = Gallery.order('created_at DESC').page params[:page]
   end
 
   # GET /galleries/1
   # GET /galleries/1.json
   def show
+   # @keyword = "갤러리"
   end
 
   # GET /galleries/new
   def new
+   # @keyword = "갤러리"
     @gallery = Gallery.new
   end
 
   # GET /galleries/1/edit
   def edit
+    #@keyword = "갤러리"
   end
 
   # POST /galleries

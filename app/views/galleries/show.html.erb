@@ -1,19 +1,69 @@
-<p id="notice"><%= notice %></p>
+<div class="main-panel">
+  <!--header-->
+  <%= render template: "main/_header" %>
+  <!--content-->
+  <div class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                <div class="card show-card">
+                    <!-- title -->
+                    <div class="header">
+                        <h4 class="title gallery-title"><%= @gallery.title %></h4>
+                    </div>
+                    <hr>
+                    <div class="text-right show-info-wrap">
+                      <span>작성자</span>
+                      <span><%= @gallery.created_at.strftime("%Y-%m-%d %H:%M") %></span>
+                      <span>조회수</span>
+                    </div>
+                    <!-- content -->
+                    <pre class="show-content">
+<%= @gallery.content %>
+                    </pre>
+                    <div class="text-right show-btn">
+                      <%= link_to '수정', edit_gallery_path(@gallery) %>
+                      <%= link_to '삭제', @gallery, method: :delete, data: { confirm: '글을 삭제하시겠습니까?' } %>
+                      <%= link_to '목록으로', galleries_path %>
+                    </div>
+                    <!-- comment -->
+                    <div class="f-size-s m-y-1">댓글</div>
+                    <hr>
+                    <div class="comments wrap">
+                      <div class="comments">
+                        <span class="comment-name f-size-s f-w-bold">이름</span>
+                        <span class="comment-date">날짜</span>
+                        <span class="m-x-1">
+                          <%= link_to '수정', edit_gallery_path(@gallery) %>&nbsp;&nbsp;
+                          <%= link_to '삭제', @gallery, method: :delete, data: { confirm: '글을 삭제하시겠습니까?' } %>
+                        </span>
+                        <div class="comment-content m-y-1">
+                          댓글내용
+                        </div>
+                      </div>
+                      <hr>
+                    </div>
+                </div>
+              </div>
+          </div>
+          
+          <!-- comment write -->
+          <div class="row">
+              <div class="col-md-12">
+                <div class="card show-card">
+                  <textarea class="comment-style" placeholder="댓글을 입력해주세요 :)" rows="5"></textarea>
+                </div>
+                <div class="text-right">
+                  <%= link_to '댓글쓰기', '/', class: 'btn btn-info btn-fill btn-wd' %>
+                </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @gallery.title %>
-</p>
+  <!-- footer -->
+  <%= render template: "main/_footer" %>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @gallery.content %>
-</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @gallery.image %>
-</p>
-
-<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
-<%= link_to 'Back', galleries_path %>

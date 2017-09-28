@@ -1,10 +1,9 @@
 class LecturesController < ApplicationController
   before_action :set_lecture, only: [:show, :edit, :update, :destroy]
-
   # GET /lectures
   # GET /lectures.json
   def index
-    @lectures = Lecture.all
+    @lectures = Lecture.order('created_at DESC').page params[:page]
   end
 
   # GET /lectures/1

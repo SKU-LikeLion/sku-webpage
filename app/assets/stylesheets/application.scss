@@ -4,9 +4,13 @@
 @import "templetes/paper-dashboard.css";
 @import "templetes/themify-icons.css";
 
+// bootstrap css
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// other css
 @import "main";
 @import "notices";
 @import "galleries";
+@import "lectures";
+@import "lecture_notes";

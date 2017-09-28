@@ -1,31 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="main-panel">
+  <!--header-->
+  <%= render template: "main/_header" %>
+  <!--content-->
+  <div class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="card lecture-card">
+                      <div class="header notice-header">
+                          <h4 class="title f-size-l">강의자료</h4>
+                          <p class="category">강의자료를 올리는 곳입니다.</p>
+                          <%= link_to '업로드', new_lecture_path, class: 'btn btn-info btn-fill btn-wd btn-write' %>
+                      </div>  
+                      <div class="row content lecture-content">
+                          <% @lectures.each do |lecture| %>
+                         
+                            <div class="col-md-4 gallery-div">
+                            <%= link_to lecture, class: 'board-title-style' do %>
+                             <!--<a href="/lectures/<%=lecture.id%>", class='board-title-style'>-->
+                              <img src="https://lh4.googleusercontent.com/E-8TcnRnoZu6t3jcA3pr6iv5o5fth76AKYWwJ-0Gb96cAYqSYMA7aBnGRS5zzthL6RntnPXZd4DvTro=w1280-h720-n-k-rw" alt="lecture-img" >
+                              <div class="gallery-span">
+                                <span><%= lecture.title %></span><br>
+                                <span><%= lecture.created_at.strftime("%Y-%m-%d") %></span>
+                              </div>
+                            <% end %>
+                            </div>
+                          <% end %>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- pagination -->
+          <div class="row text-center">
+            <%= paginate @lectures %>
+          </div>
+      </div>
+  </div>
 
-<h1>Lectures</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Video</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @lectures.each do |lecture| %>
-      <tr>
-        <td><%= lecture.title %></td>
-        <td><%= lecture.content %></td>
-        <td><%= lecture.video %></td>
-        <td><%= link_to 'Show', lecture %></td>
-        <td><%= link_to 'Edit', edit_lecture_path(lecture) %></td>
-        <td><%= link_to 'Destroy', lecture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Lecture', new_lecture_path %>
+  <!-- footer -->
+  <%= render template: "main/_footer" %>
+</div>

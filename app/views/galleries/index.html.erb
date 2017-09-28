@@ -13,21 +13,20 @@
                           <%= link_to '업로드', new_gallery_path, class: 'btn btn-info btn-fill btn-wd btn-write' %>
                       </div>
                       <div class="row content gallery-content">
-                          <!--<% 3.times do %>-->
+                          <% @galleries.each do |gallery| %>
+                         
                             <div class="col-md-4 gallery-div">
+                              <!--link_to로 수정해야함-->
+                            <%= link_to gallery, class: 'board-title-style' do %>
+                             <!--<a href="/galleries/<%=gallery.id%>", class='board-title-style'>-->
                               <img src="assets/img01.jpg" alt="gallery-img" >
                               <div class="gallery-span">
-                                <span>멋사사진입니당~</span>
-                                <span>2017-09-06</span>
+                                <span><%= gallery.title %></span><br>
+                                <span><%= gallery.created_at.strftime("%Y-%m-%d") %></span>
                               </div>
+                            <% end %>
                             </div>
-                            <div class="col-md-4 gallery-div">
-                              <img src="assets/img02.jpg" alt="gallery-img" >
-                            </div>
-                            <div class="col-md-4 gallery-div">
-                              <img src="assets/img03.jpg" alt="gallery-img" >
-                            </div>
-                          <!--<% end %>-->
+                          <% end %>
                       </div>
                   </div>
               </div>

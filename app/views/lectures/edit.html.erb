@@ -1,6 +1,31 @@
-<h1>Editing Lecture</h1>
 
-<%= render 'form', lecture: @lecture %>
 
-<%= link_to 'Show', @lecture %> |
-<%= link_to 'Back', lectures_path %>
+<head>
+    <link rel="stylesheet" href="../../assets/templetes/paper-dashboard.css">
+</head>
+
+
+<!--<%= link_to 'Show', @lecture %> |-->
+<!--<%= link_to 'Back', lectures_path %>-->
+
+
+<div class="main-panel">
+  <!--header-->
+  <%= render template: "main/_header" %>
+  <!--content-->
+  <div class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                                      
+                <%= render 'form', lecture: @lecture %>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- footer -->
+  <%= render template: "main/_footer" %>
+
+<!--<%= link_to 'Back', lectures_path %>-->
+</div>

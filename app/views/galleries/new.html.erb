@@ -1,5 +1,21 @@
-<h1>New Gallery</h1>
+<div class="main-panel">
+  <!--header-->
+  <%= render template: "main/_header" %>
+  <!--content-->
+  <div class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                                      
+                <%= render 'form', gallery: @gallery %>
+              </div>
+          </div>
+      </div>
+  </div>
 
-<%= render 'form', gallery: @gallery %>
 
-<%= link_to 'Back', galleries_path %>
+  <!-- footer -->
+  <%= render template: "main/_footer" %>
+
+<!--<%= link_to 'Back', galleries_path %>-->
+</div>

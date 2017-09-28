@@ -1,10 +1,9 @@
 class LectureNotesController < ApplicationController
   before_action :set_lecture_note, only: [:show, :edit, :update, :destroy]
-
   # GET /lecture_notes
   # GET /lecture_notes.json
   def index
-    @lecture_notes = LectureNote.all
+    @lecture_notes = LectureNote.order('created_at DESC').page params[:page]
   end
 
   # GET /lecture_notes/1

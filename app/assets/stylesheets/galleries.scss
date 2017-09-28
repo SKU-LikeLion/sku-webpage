@@ -6,6 +6,7 @@
     border:1px solid black;
     // height: 30vh;
     padding: 30px;
+    position: relative;
 }
 .gallery-div img {
     object-fit: cover;
@@ -13,11 +14,8 @@
     height: 100%;
 }
 .gallery-div .gallery-span {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin-top: -30px;
+    position: absolute;
+    bottom: 40px;
     padding: 0 10px;
 }
 .gallery-div .gallery-span span {
