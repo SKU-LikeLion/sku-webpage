@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require popper
 //= require bootstrap-sprockets
+//= require scrollIt.min
 //= require jquery_ujs
 //= require_tree .

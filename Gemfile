@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 #bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'popper_js', '~> 1.11.1'
 
 #test 회원가입
 gem 'devise'

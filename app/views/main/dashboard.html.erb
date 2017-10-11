@@ -298,6 +298,36 @@
         </div>
 
 
+<!--추가-->
+<div class="fuckpositoning" >
+
+<h1>Main#index</h1>
+<p>기본 화면</p>
+
+<div id="sidebar_test">
+<ul>
+  <li>사이드바</li>
+  <li><%=link_to '공지사항',notices_path %></li>
+  <li><%=link_to '강의',lectures_path%></li>
+  <li><%=link_to '강의노트',lecture_notes_path %></li>
+  <li><%=link_to '자유게시판',posts_path %></li>
+  <li><%=link_to '갤러리',galleries_path %></li>
+
+</ul>
+</div>
+<%if user_signed_in?%>
+    <%=link_to '로그아웃', destroy_user_session_path,method: 'delete'%>
+<%else%>
+<%=link_to '로그인', new_user_session_path %>
+<%=link_to '회원가입',new_user_registration_path%>
+
+<%end%>
+
+
+  <!--이런식으로 사용하면됩니다 알아서 붙여주세용-->
+</div>
+
+
         <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">

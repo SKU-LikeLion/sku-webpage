@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width" />
     <!--font-->
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 
     <title>Backend02</title>
@@ -18,11 +17,6 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <!-- sidebar layout -->
-      <%= render template: "main/_sidebar" %>
-      <!-- content layout -->
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>
